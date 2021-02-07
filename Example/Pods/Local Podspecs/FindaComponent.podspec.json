@@ -1,0 +1,22 @@
+{
+  "name": "FindaComponent",
+  "version": "0.1.0",
+  "summary": "A short description of FindaComponent.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ParkYoungjin0303/FindaComponent",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ParkYoungjin0303": "youngjin@finda.co.kr"
+  },
+  "source": {
+    "git": "https://github.com/ParkYoungjin0303/FindaComponent.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "FindaComponent/Classes/**/*"
+}

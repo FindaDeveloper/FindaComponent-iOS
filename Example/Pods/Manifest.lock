@@ -1,0 +1,16 @@
+PODS:
+  - FindaComponent (0.1.0)
+
+DEPENDENCIES:
+  - FindaComponent (from `../`)
+
+EXTERNAL SOURCES:
+  FindaComponent:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FindaComponent: 08ca045c1b364c770fc083b33228ccd1525fa72c
+
+PODFILE CHECKSUM: 47e7b5c81f7034d8a6eeabb2f28e83faeb8be4d8
+
+COCOAPODS: 1.10.0

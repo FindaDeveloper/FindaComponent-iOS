@@ -1,0 +1,6 @@
+framework module FindaComponent {
+  umbrella header "FindaComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
