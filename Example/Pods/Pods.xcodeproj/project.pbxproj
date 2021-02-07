@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1EFCFD043F77EB8D4831ECDB7723206D /* Pods-FindaComponent_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E968641E485D6B9D79BD8A74E42D4FD4 /* Pods-FindaComponent_Tests-dummy.m */; };
-		2521F7B6246A676EFC02CD2AD9EF7571 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2DBC04158311632A3D909EE5C17B65 /* ReplaceMe.swift */; };
 		5720D65E48ECE0057131FD1CD4648C4D /* Pods-FindaComponent_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D24FB5EADD3EB7338479B8A1EB26E87A /* Pods-FindaComponent_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A742F062A9F57772D67A678C6BCD7AE /* Pods-FindaComponent_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DC1B709B198AFC38CE8335EA552ED /* FindaComponent-dummy.m */; };
+		913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F716425CFE0E3003FE8F1 /* Typography.swift */; };
 		B4B8F11D401335BE25250A08C55FDF82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		D1137918F678EDA9FE9B75091F09828A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		E51E5B284E8BAF11A77A64B0D5CAAA27 /* FindaComponent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14750EE814C732D50E799A9DA514BC0F /* FindaComponent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,35 +40,35 @@
 		14750EE814C732D50E799A9DA514BC0F /* FindaComponent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FindaComponent-umbrella.h"; sourceTree = "<group>"; };
 		149B6D2ADF954D36C65B6261921B3B2F /* FindaComponent-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FindaComponent-prefix.pch"; sourceTree = "<group>"; };
 		1F32FB0A33D92E3C46D0F8A335DA0F51 /* Pods-FindaComponent_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FindaComponent_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2727905B1DA441FFF712886C8DA74B60 /* Pods_FindaComponent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FindaComponent_Example.framework; path = "Pods-FindaComponent_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2727905B1DA441FFF712886C8DA74B60 /* Pods_FindaComponent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindaComponent_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6C2E03CBA5F04FCF3EFF969ACD2BD5 /* FindaComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FindaComponent.debug.xcconfig; sourceTree = "<group>"; };
 		3B61F52B40050B014640B69B684CD02B /* Pods-FindaComponent_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FindaComponent_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		46B598A42687C9944186CFB30E89B4BD /* Pods-FindaComponent_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Example-Info.plist"; sourceTree = "<group>"; };
 		4A8DC1B709B198AFC38CE8335EA552ED /* FindaComponent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FindaComponent-dummy.m"; sourceTree = "<group>"; };
-		4B93B2FE914848CA129D835B229FD1C5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4B93B2FE914848CA129D835B229FD1C5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		564940B1702C63D9BCB7C7572E4D9BF4 /* FindaComponent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FindaComponent.modulemap; sourceTree = "<group>"; };
 		589846B76868BD1CBE898D51332689DD /* Pods-FindaComponent_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FindaComponent_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5D08B800B62957331914D14D48779FB0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5D08B800B62957331914D14D48779FB0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		77B1E528D4FBE323C98C7F89AC5AF15C /* Pods-FindaComponent_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FindaComponent_Tests-umbrella.h"; sourceTree = "<group>"; };
 		813A40C0B04CBF03506D27B53D2F0BC6 /* Pods-FindaComponent_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FindaComponent_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		913F716425CFE0E3003FE8F1 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		934E4EDCC353B93BF6754AF132232578 /* Pods-FindaComponent_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-Info.plist"; sourceTree = "<group>"; };
-		97A2B36900BCCDAB9A68102EA05BAB74 /* Pods_FindaComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FindaComponent_Tests.framework; path = "Pods-FindaComponent_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A2B36900BCCDAB9A68102EA05BAB74 /* Pods_FindaComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindaComponent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF29447E12A97E47D797AE135AC0E92 /* Pods-FindaComponent_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FindaComponent_Example.modulemap"; sourceTree = "<group>"; };
 		9B022AC6BCF37A51DECAA902DD91B7B4 /* Pods-FindaComponent_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FindaComponent_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB59CD3F397415AC9CAFF506EF944807 /* FindaComponent-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FindaComponent-Info.plist"; sourceTree = "<group>"; };
-		AE2DBC04158311632A3D909EE5C17B65 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = FindaComponent/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		BAE34255E9811A6826302E203243946C /* Pods-FindaComponent_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FindaComponent_Example-dummy.m"; sourceTree = "<group>"; };
 		BCA65DF4E027F7E3AEFF3435B623E8E0 /* Pods-FindaComponent_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FindaComponent_Tests.modulemap"; sourceTree = "<group>"; };
-		C8407131BA3992151EFDF9A319835FC5 /* FindaComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FindaComponent.framework; path = FindaComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8407131BA3992151EFDF9A319835FC5 /* FindaComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FindaComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA983546277F2520F3585102CA48D4C /* Pods-FindaComponent_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CE8CAD3D4F7299F602A5E33ABED0DA03 /* FindaComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FindaComponent.release.xcconfig; sourceTree = "<group>"; };
 		D24FB5EADD3EB7338479B8A1EB26E87A /* Pods-FindaComponent_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FindaComponent_Example-umbrella.h"; sourceTree = "<group>"; };
 		DA5AC5F67425BAAFD478A72924AEBA0B /* Pods-FindaComponent_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FindaComponent_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E968641E485D6B9D79BD8A74E42D4FD4 /* Pods-FindaComponent_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FindaComponent_Tests-dummy.m"; sourceTree = "<group>"; };
-		F8B4D82084B4F4D62D9E5E20E035A7E7 /* FindaComponent.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FindaComponent.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F8B4D82084B4F4D62D9E5E20E035A7E7 /* FindaComponent.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FindaComponent.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FDE2F0F04B82051862312E38ED7C8D47 /* Pods-FindaComponent_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FindaComponent_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +148,22 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		913F716225CFE083003FE8F1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				913F716325CFE08F003FE8F1 /* Garu */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		913F716325CFE08F003FE8F1 /* Garu */ = {
+			isa = PBXGroup;
+			children = (
+				913F716425CFE0E3003FE8F1 /* Typography.swift */,
+			);
+			path = Garu;
+			sourceTree = "<group>";
+		};
 		9796C2E52698A18D64847D08E8F063EC /* Pods-FindaComponent_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +194,7 @@
 		BA183E8A51ADE868A466D5687B3D868B /* FindaComponent */ = {
 			isa = PBXGroup;
 			children = (
-				AE2DBC04158311632A3D909EE5C17B65 /* ReplaceMe.swift */,
+				913F716225CFE083003FE8F1 /* Source */,
 				A588B160E9242593DB04FA51EA27271B /* Pod */,
 				8874D24626A1D0BBC7A209E97082BD00 /* Support Files */,
 			);
@@ -316,7 +332,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					1479D9EA700F4558AE9C98A0B17C8E51 = {
+						LastSwiftMigration = 1230;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,8 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */,
-				2521F7B6246A676EFC02CD2AD9EF7571 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +442,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FindaComponent_Tests/Pods-FindaComponent_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FindaComponent_Tests/Pods-FindaComponent_Tests.modulemap";
@@ -442,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE8CAD3D4F7299F602A5E33ABED0DA03 /* FindaComponent.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -453,7 +475,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FindaComponent/FindaComponent-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FindaComponent/FindaComponent-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FindaComponent/FindaComponent.modulemap";
 				PRODUCT_MODULE_NAME = FindaComponent;
@@ -461,7 +483,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -484,7 +506,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FindaComponent_Tests/Pods-FindaComponent_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FindaComponent_Tests/Pods-FindaComponent_Tests.modulemap";
@@ -555,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -583,7 +605,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FindaComponent_Example/Pods-FindaComponent_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FindaComponent_Example/Pods-FindaComponent_Example.modulemap";
@@ -605,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E6C2E03CBA5F04FCF3EFF969ACD2BD5 /* FindaComponent.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -616,7 +639,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FindaComponent/FindaComponent-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FindaComponent/FindaComponent-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FindaComponent/FindaComponent.modulemap";
 				PRODUCT_MODULE_NAME = FindaComponent;
@@ -624,7 +647,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -681,13 +705,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -708,7 +731,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FindaComponent_Example/Pods-FindaComponent_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FindaComponent_Example/Pods-FindaComponent_Example.modulemap";

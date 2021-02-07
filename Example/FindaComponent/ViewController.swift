@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import FindaComponent
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Typography.allCases.forEach {
+            print("Typorgaphy.\($0) = \($0.rawValue)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
