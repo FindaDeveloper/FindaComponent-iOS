@@ -12,6 +12,10 @@
 		6A742F062A9F57772D67A678C6BCD7AE /* Pods-FindaComponent_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DC1B709B198AFC38CE8335EA552ED /* FindaComponent-dummy.m */; };
 		913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F716425CFE0E3003FE8F1 /* Typography.swift */; };
+		913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */; };
+		913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */; };
+		913F71B025CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AF25CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf */; };
+		91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */; };
 		B4B8F11D401335BE25250A08C55FDF82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		D1137918F678EDA9FE9B75091F09828A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		E51E5B284E8BAF11A77A64B0D5CAAA27 /* FindaComponent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14750EE814C732D50E799A9DA514BC0F /* FindaComponent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +58,10 @@
 		77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FindaComponent_Tests-umbrella.h"; sourceTree = "<group>"; };
 		813A40C0B04CBF03506D27B53D2F0BC6 /* Pods-FindaComponent_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FindaComponent_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		913F716425CFE0E3003FE8F1 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
+		913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.ttf"; sourceTree = "<group>"; };
+		913F71AF25CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
+		91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaComponent.swift; sourceTree = "<group>"; };
 		934E4EDCC353B93BF6754AF132232578 /* Pods-FindaComponent_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-Info.plist"; sourceTree = "<group>"; };
 		97A2B36900BCCDAB9A68102EA05BAB74 /* Pods_FindaComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindaComponent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF29447E12A97E47D797AE135AC0E92 /* Pods-FindaComponent_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FindaComponent_Example.modulemap"; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				913F716325CFE08F003FE8F1 /* Garu */,
+				91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -162,6 +171,32 @@
 				913F716425CFE0E3003FE8F1 /* Typography.swift */,
 			);
 			path = Garu;
+			sourceTree = "<group>";
+		};
+		913F717D25CFE71E003FE8F1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				913F717E25CFE8C5003FE8F1 /* Font */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		913F717E25CFE8C5003FE8F1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				913F717F25CFE8D4003FE8F1 /* SpoqaHanSans */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		913F717F25CFE8D4003FE8F1 /* SpoqaHanSans */ = {
+			isa = PBXGroup;
+			children = (
+				913F71AF25CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf */,
+				913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */,
+				913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */,
+			);
+			path = SpoqaHanSans;
 			sourceTree = "<group>";
 		};
 		9796C2E52698A18D64847D08E8F063EC /* Pods-FindaComponent_Example */ = {
@@ -194,6 +229,7 @@
 		BA183E8A51ADE868A466D5687B3D868B /* FindaComponent */ = {
 			isa = PBXGroup;
 			children = (
+				913F717D25CFE71E003FE8F1 /* Resource */,
 				913F716225CFE083003FE8F1 /* Source */,
 				A588B160E9242593DB04FA51EA27271B /* Pod */,
 				8874D24626A1D0BBC7A209E97082BD00 /* Support Files */,
@@ -378,6 +414,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */,
+				913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */,
+				913F71B025CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +437,7 @@
 			files = (
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */,
+				91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

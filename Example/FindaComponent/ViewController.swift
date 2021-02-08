@@ -14,9 +14,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Typography.allCases.forEach {
-            print("Typorgaphy.\($0) = \($0.rawValue)")
-        }
+        let label = FindaLabel(style: .bold, size: .mega)
+        label.text = "가나다"
+        view.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            label.leftAnchor.constraint(equalTo: view.leftAnchor),
+            label.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
     }
 
     override func didReceiveMemoryWarning() {
