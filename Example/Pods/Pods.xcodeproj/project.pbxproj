@@ -15,6 +15,7 @@
 		913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */; };
 		913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */; };
 		913F71B025CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AF25CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf */; };
+		918672DF25D223A1007AEE3B /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918672DE25D223A1007AEE3B /* Spacing.swift */; };
 		9199ECBD25D20B9200A7D890 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199ECBC25D20B9200A7D890 /* Color.swift */; };
 		91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */; };
 		B4B8F11D401335BE25250A08C55FDF82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -62,6 +63,7 @@
 		913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
 		913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.ttf"; sourceTree = "<group>"; };
 		913F71AF25CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
+		918672DE25D223A1007AEE3B /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		9199ECBC25D20B9200A7D890 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaComponent.swift; sourceTree = "<group>"; };
 		934E4EDCC353B93BF6754AF132232578 /* Pods-FindaComponent_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				913F716425CFE0E3003FE8F1 /* Typography.swift */,
 				9199ECBC25D20B9200A7D890 /* Color.swift */,
+				918672DE25D223A1007AEE3B /* Spacing.swift */,
 			);
 			path = Garu;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			files = (
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,
+				918672DF25D223A1007AEE3B /* Spacing.swift in Sources */,
 				8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */,
 				91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */,
 			);
