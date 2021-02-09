@@ -15,15 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let label = FindaLabel(style: .bold, size: .mega)
-        label.text = "가나다"
+        label.text = "FINDA"
+        label.textColor = .accentBlue
         view.addSubview(label)
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            label.leftAnchor.constraint(equalTo: view.leftAnchor),
-            label.rightAnchor.constraint(equalTo: view.rightAnchor),
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 

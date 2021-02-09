@@ -9,7 +9,10 @@ import Foundation
 
 public class FindaFont {
     
-    static public func initialize() {
+    /**
+     Spoqa Han Sans 폰트를 사용하려면 초기화가 필요합니다.
+     */
+    public static func initialize() {
         UIFont.fontsURLs().forEach {
             UIFont.register(from: $0)
         }
@@ -17,6 +20,7 @@ public class FindaFont {
 }
 
 public extension UIFont {
+    
     static func register(from url: URL) {
         guard let fontDataProvider = CGDataProvider(url: url as CFURL) else {
             return
