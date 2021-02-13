@@ -14,17 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = FindaLabel(style: .bold, size: .mega)
-        label.text = "FINDA"
-        label.textColor = .accentBlue
-        view.addSubview(label)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        let bigHeader = FindaBigHeader(title: "MY 대출")
+        bigHeader.icon = (UIImage(named: "close"), { print("close") })
+        view.addSubview(bigHeader)
+        bigHeader.setConstraint(
+            top: safeArea.top,
+            left: view.left,
+            right: view.right
+        )
     }
 
     override func didReceiveMemoryWarning() {
