@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let bigHeader = FindaBigHeader(title: "MY 대출")
-        bigHeader.icon = (UIImage(named: "close"), { print("close") })
+        bigHeader.icon1 = (UIImage(named: "close"), { print("1") })
+        bigHeader.icon2 = (UIImage(named: "close"), { print("2") })
+        bigHeader.icon3 = (UIImage(named: "close"), { print("3") })
         view.addSubview(bigHeader)
         bigHeader.setConstraint(
             top: safeArea.top,
