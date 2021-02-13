@@ -14,12 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bigHeader = FindaBigHeader(title: "MY 대출")
-        bigHeader.icon1 = (UIImage(named: "close"), { print("1") })
-        bigHeader.icon2 = (UIImage(named: "close"), { print("2") })
-        bigHeader.icon3 = (UIImage(named: "close"), { print("3") })
-        view.addSubview(bigHeader)
-        bigHeader.setConstraint(
+        let header = FindaBasicHeader()
+        header.titleLabel.text = "핀다 대출신청"
+        header.backButtonIcon = (UIImage(named: "go_back"), { print("back") })
+        header.rightButtonType = .Icon(image: UIImage(named: "close"), click: { print("icon")})
+        header.rightButtonType = .Text(title: "취소", click: { print("text") })
+        view.addSubview(header)
+        header.setConstraint(
             top: safeArea.top,
             left: view.left,
             right: view.right

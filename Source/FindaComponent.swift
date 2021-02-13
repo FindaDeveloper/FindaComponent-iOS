@@ -101,6 +101,11 @@ public extension UIView {
     func addSubviews(_ views: [UIView]) {
         views.forEach { addSubview($0) }
     }
+    
+    func addTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        isUserInteractionEnabled = true
+        addGestureRecognizer(tapGestureRecognizer)
+    }
 }
 
 public extension UIStackView {
@@ -111,3 +116,7 @@ public extension UIStackView {
 }
 
 public typealias Action = (() -> Void)
+
+func fcLog(_ log: String) {
+    print("[FindaComponentLog] \(log)")
+}

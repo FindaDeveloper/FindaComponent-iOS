@@ -27,4 +27,3 @@ ParkYoungjin0303, youngjin@finda.co.kr
 ## License
 
 FindaComponent is available under the MIT license. See the LICENSE file for more info.
-# FindaComponent-iOS

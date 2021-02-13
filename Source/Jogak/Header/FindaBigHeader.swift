@@ -22,6 +22,9 @@ public class FindaBigHeader: UIView {
         super.init(frame: .zero)
         setLayout()
         titleLabel.text = title
+        if title.count > 8 {
+            fcLog("\(self)의 title의 길이가 8자리를 초과하였습니다.")
+        }
     }
     
     //MARK: View
@@ -29,7 +32,7 @@ public class FindaBigHeader: UIView {
     /**
      제목 레이블
      */
-    public lazy var titleLabel = FindaLabel(style: .bold, size: .jumbo)
+    public lazy var titleLabel = FindaLabel(style: .bold, size: .jumbo, color: .mono900)
     
     /**
      오른쪽 기준 첫번째 아이콘 버튼
@@ -62,10 +65,7 @@ public class FindaBigHeader: UIView {
     }()
     
     private func setLayout() {
-        addSubview(titleLabel)
-        addSubview(iconButton1)
-        addSubview(iconButton2)
-        addSubview(iconButton3)
+        addSubviews([titleLabel, iconButton1, iconButton2, iconButton3])
         
         titleLabel.setConstraint(
             top: top,
