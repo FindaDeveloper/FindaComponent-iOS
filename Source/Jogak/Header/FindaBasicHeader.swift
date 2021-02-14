@@ -8,16 +8,9 @@
 import UIKit
 
 /**
- 제목, 뒤로가기 버튼, 우측 버튼이 존재하는 Header
+ 제목, 뒤로가기 버튼, 우측 버튼이 존재하는 높이 50의 Header
  */
 public class FindaBasicHeader: UIView {
-    
-    public typealias Icon = (image: UIImage?, imageClick: Action)
-    
-    public enum RightButtonType {
-        case Text(title: String, click: Action)
-        case Icon(image: UIImage?, click: Action)
-    }
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,6 +87,13 @@ public class FindaBasicHeader: UIView {
     
     // MARK: Data
     
+    public typealias Icon = (image: UIImage?, imageClick: Action)
+    
+    public enum RightButtonType {
+        case Text(title: String, click: Action)
+        case Icon(image: UIImage?, click: Action)
+    }
+    
     /**
      backButton(뒤로가기 버튼)의 데이터
      */
@@ -122,6 +122,9 @@ public class FindaBasicHeader: UIView {
                 rightButtonClick = click
                 rightIconButton.isHidden = true
                 rightTextButton.isHidden = false
+                if title.count > 13 {
+                    fcLog("\(self.rightTextButton)의 text 길이가 13자리를 초과하였습니다.")
+                }
             case .none:
                 rightIconButton.isHidden = true
                 rightTextButton.isHidden = true

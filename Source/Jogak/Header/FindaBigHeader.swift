@@ -12,8 +12,6 @@ import UIKit
  */
 public class FindaBigHeader: UIView {
     
-    public typealias Icon = (image: UIImage?, imageClick: Action)
-    
     /**
      - Parameters:
         - title: 제목 텍스트 (title.count <= 8)
@@ -93,6 +91,8 @@ public class FindaBigHeader: UIView {
     }
     
     // MARK: Data
+    
+    public typealias Icon = (image: UIImage?, imageClick: Action)
     
     /**
      iconButton1(오른쪽 기준 첫번째 아이콘 버튼)의 데이터
