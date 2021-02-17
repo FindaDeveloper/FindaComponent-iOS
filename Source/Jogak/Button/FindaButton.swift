@@ -94,6 +94,11 @@ public class FindaButton: UIView {
     }
     
     /**
+     버튼 클릭
+     */
+    public var click: Action?
+    
+    /**
      버튼 타입 (배경, 제목을 결정함)
      */
     public let type: Type
@@ -180,8 +185,6 @@ public class FindaButton: UIView {
         [.mono200,  .navy500,   .navy500,        .navy300,      .mono300],   // hover
         [.navy100,  .navy100,   .navy100,        .navy200,      .clear]      // disable
     ]
-    
-    public var click: Action?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
