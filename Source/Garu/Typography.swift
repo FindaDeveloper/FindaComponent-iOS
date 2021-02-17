@@ -36,6 +36,10 @@ public enum TypographyStyle: String, CaseIterable {
  */
 public class FindaLabel: UILabel {
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     /**
      - Parameters:
         - style: 폰트 스타일
@@ -44,6 +48,16 @@ public class FindaLabel: UILabel {
      */
     public init(style: TypographyStyle, size: TypographySize, color: UIColor) {
         super.init(frame: .zero)
+        setLabel(style: style, size: size, color: color)
+    }
+    
+    /**
+     - Parameters:
+        - style: 폰트 스타일
+        - size: 폰트 사이즈
+        - color: 폰트 색상
+     */
+    public func setLabel(style: TypographyStyle, size: TypographySize, color: UIColor) {
         self.font = UIFont(name: style.rawValue, size: size.rawValue)
         self.textColor = color
     }

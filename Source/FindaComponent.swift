@@ -83,6 +83,14 @@ public extension UILayoutGuide {
 
 public extension UIViewController {
     var safeArea: UILayoutGuide { view.safeAreaLayoutGuide }
+    
+    var safeAreaInsetBottom: CGFloat {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+        } else {
+            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        }
+    }
 }
 
 public extension UIEdgeInsets {
