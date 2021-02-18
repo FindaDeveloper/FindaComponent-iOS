@@ -34,7 +34,7 @@ public class FindaButton: UIView {
     /**
      버튼 제목 레이블
      */
-    public var titleLabel = FindaLabel()
+    public lazy var titleLabel = FindaLabel()
     
     private lazy var titleLabelRightConstraint =
         titleLabel.centerX.constraint(equalTo: centerX, constant: 0)

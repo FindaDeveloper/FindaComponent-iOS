@@ -22,6 +22,23 @@ class ViewController: UIViewController {
             bottom: view.bottom,
             margins: .init(top: 0, left: 20, bottom: -20 - safeAreaInsetBottom, right: -20)
         )
+        
+        let underlineButton = FindaUnderlineTextButton(title: "버튼") { print("underline") }
+        view.addSubview(underlineButton)
+        underlineButton.setConstraint(
+            centerX: view.centerX,
+            centerY: view.centerY
+        )
+        
+        let detailButton = FindaDetailTextButton(title: "버튼", icon: UIImage(named: "detail_deep")) {
+            print("detail")
+        }
+        detailButton.accentColor = .blue500
+        view.addSubview(detailButton)
+        detailButton.setConstraint(
+            top: underlineButton.bottom,
+            centerX: view.centerX
+        )
     }
 
     override func didReceiveMemoryWarning() {

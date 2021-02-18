@@ -20,6 +20,7 @@
 		919034B225D7E3FD003977F7 /* FindaBasicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919034B125D7E3FD003977F7 /* FindaBasicHeader.swift */; };
 		9199ECBD25D20B9200A7D890 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199ECBC25D20B9200A7D890 /* Color.swift */; };
 		91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11C625DCBCBB00CC7255 /* FindaButton.swift */; };
+		91EA11D225DCFD6800CC7255 /* FindaTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */; };
 		91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */; };
 		B4B8F11D401335BE25250A08C55FDF82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		D1137918F678EDA9FE9B75091F09828A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -71,6 +72,7 @@
 		919034B125D7E3FD003977F7 /* FindaBasicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaBasicHeader.swift; sourceTree = "<group>"; };
 		9199ECBC25D20B9200A7D890 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		91EA11C625DCBCBB00CC7255 /* FindaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaButton.swift; sourceTree = "<group>"; };
+		91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaTextButton.swift; sourceTree = "<group>"; };
 		91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaComponent.swift; sourceTree = "<group>"; };
 		934E4EDCC353B93BF6754AF132232578 /* Pods-FindaComponent_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-Info.plist"; sourceTree = "<group>"; };
 		97A2B36900BCCDAB9A68102EA05BAB74 /* Pods_FindaComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindaComponent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				91EA11C625DCBCBB00CC7255 /* FindaButton.swift */,
+				91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,
 				91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */,
 				918672DF25D223A1007AEE3B /* Spacing.swift in Sources */,
+				91EA11D225DCFD6800CC7255 /* FindaTextButton.swift in Sources */,
 				8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */,
 				916D04E825D279D200190237 /* FindaBigHeader.swift in Sources */,
 				919034B225D7E3FD003977F7 /* FindaBasicHeader.swift in Sources */,
