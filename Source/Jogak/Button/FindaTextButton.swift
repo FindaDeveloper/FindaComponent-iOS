@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import SwiftUI
 
 public class FindaUnderlineTextButton: UIButton {
 
+    /**
+     - Parameters:
+        - title: 버튼 제목
+        - click: 버튼 클릭 동작
+     */
     public init(title: String, click: @escaping Action) {
         super.init(frame: .zero)
         self.click = click
@@ -51,11 +57,27 @@ public class FindaUnderlineTextButton: UIButton {
 
 public class FindaDetailTextButton: UIView {
     
-    public init(title: String, icon: UIImage?, click: @escaping Action) {
+    /**
+     - Parameters:
+        - title: 버튼 제목
+        - icon: 상세 이미지
+        - accentColor: titleLabel과 detailIcon의 tintColor. nil(기본값)일 경우 titleLabel은 navy700, detailIcon은 navy500
+     - nil일 경우
+     */
+    public init(title: String, icon: UIImage?, accentColor: UIColor? = nil, click: @escaping Action) {
         super.init(frame: .zero)
         setLayout()
         titleLabel.text = title
-        detailIcon.image = icon?.withRenderingMode(.alwaysTemplate)
+        
+        icon?.withRenderingMode(.alwaysTemplate)
+        
+        if let it = accentColor {
+            titleLabel.textColor = it
+            detailIcon.tintColor = it
+        } else {
+            detailIcon.tintColor = .navy500
+        }
+        detailIcon.image = icon
         
         self.click = click
         addTapGesture(.init(target: self, action: #selector(clickSelf)))
@@ -105,18 +127,6 @@ public class FindaDetailTextButton: UIView {
     
     @objc private func clickSelf() {
         click?()
-    }
-    
-    /**
-     강조 색
-     */
-    public var accentColor: UIColor? {
-        didSet {
-            if let it = accentColor {
-                titleLabel.textColor = it
-                detailIcon.tintColor = it
-            }
-        }
     }
     
     required init?(coder: NSCoder) {

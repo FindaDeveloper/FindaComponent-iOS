@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         let detailButton = FindaDetailTextButton(title: "버튼", icon: UIImage(named: "detail_deep")) {
             print("detail")
         }
-        detailButton.accentColor = .blue500
         view.addSubview(detailButton)
         detailButton.setConstraint(
             top: underlineButton.bottom,
