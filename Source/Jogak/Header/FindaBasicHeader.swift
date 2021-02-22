@@ -30,7 +30,8 @@ public class FindaBasicHeader: UIView {
     public lazy var backButton: UIButton = {
         let v = UIButton()
         v.contentEdgeInsets = .init(horizontal: 8, vertical: 8)
-        v.addTarget(self, action: #selector(clickBackButton), for: .touchUpInside)
+        v.setImage(UIImage(findaAsset: .goBack), for: .normal)
+        v.addTarget(self, action: #selector(_clickBackButton), for: .touchUpInside)
         return v
     }()
     
@@ -40,7 +41,7 @@ public class FindaBasicHeader: UIView {
     public lazy var rightIconButton: UIButton = {
         let v = UIButton()
         v.contentEdgeInsets = .init(horizontal: 8, vertical: 8)
-        v.addTarget(self, action: #selector(clickRightButton), for: .touchUpInside)
+        v.addTarget(self, action: #selector(_clickRightButton), for: .touchUpInside)
         return v
     }()
     
@@ -49,7 +50,7 @@ public class FindaBasicHeader: UIView {
      */
     public lazy var rightTextButton: FindaLabel = {
         let v = FindaLabel(style: .regular, size: .paragraph, color: .mono800)
-        v.addTapGesture(.init(target: self, action: #selector(clickRightButton)))
+        v.addTapGesture(.init(target: self, action: #selector(_clickRightButton)))
         return v
     }()
     
@@ -97,13 +98,7 @@ public class FindaBasicHeader: UIView {
     /**
      backButton(뒤로가기 버튼)의 데이터
      */
-    public var backButtonIcon: Icon? {
-        didSet {
-            if let it = backButtonIcon {
-                backButton.setImage(it.image, for: .normal)
-            }
-        }
-    }
+    public var clickBackButton: Action?
     
     /**
      rightIconButton, rightTextButton(우측 버튼)의 데이터
@@ -135,11 +130,11 @@ public class FindaBasicHeader: UIView {
     
     private var rightButtonClick: Action?
     
-    @objc private func clickBackButton() {
-        self.backButtonIcon?.imageClick()
+    @objc private func _clickBackButton() {
+        self.clickBackButton?()
     }
     
-    @objc private func clickRightButton() {
+    @objc private func _clickRightButton() {
         self.rightButtonClick?()
     }
     

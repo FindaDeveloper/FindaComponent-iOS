@@ -64,20 +64,13 @@ public class FindaDetailTextButton: UIView {
         - accentColor: titleLabel과 detailIcon의 tintColor. nil(기본값)일 경우 titleLabel은 navy700, detailIcon은 navy500
      - nil일 경우
      */
-    public init(title: String, icon: UIImage?, accentColor: UIColor? = nil, click: @escaping Action) {
+    public init(title: String, accentColor: UIColor = .navy500, click: @escaping Action) {
         super.init(frame: .zero)
         setLayout()
         titleLabel.text = title
         
-        icon?.withRenderingMode(.alwaysTemplate)
-        
-        if let it = accentColor {
-            titleLabel.textColor = it
-            detailIcon.tintColor = it
-        } else {
-            detailIcon.tintColor = .navy500
-        }
-        detailIcon.image = icon
+        detailIcon.image = UIImage(findaAsset: .detailDeep)?.withRenderingMode(.alwaysTemplate)
+        detailIcon.tintColor = accentColor
         
         self.click = click
         addTapGesture(.init(target: self, action: #selector(clickSelf)))

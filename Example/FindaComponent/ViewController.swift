@@ -14,6 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let header = FindaBasicHeader()
+        header.clickBackButton = { print("back") }
+        header.titleLabel.text = "핀다 대출신청"
+        header.rightButtonType = .Icon(image: UIImage(findaAsset: .close), click: { print("close") })
+        view.addSubview(header)
+        header.setConstraint(
+            top: safeArea.top,
+            left: view.left,
+            right: view.right
+        )
         let button = FindaButton(type: .primary, size: .small, title: "버튼") { print("button") }
         view.addSubview(button)
         button.setConstraint(
@@ -22,15 +32,13 @@ class ViewController: UIViewController {
             bottom: view.bottom,
             margins: .init(top: 0, left: 20, bottom: -20 - safeAreaInsetBottom, right: -20)
         )
-        
         let underlineButton = FindaUnderlineTextButton(title: "버튼") { print("underline") }
         view.addSubview(underlineButton)
         underlineButton.setConstraint(
             centerX: view.centerX,
             centerY: view.centerY
         )
-        
-        let detailButton = FindaDetailTextButton(title: "버튼", icon: UIImage(named: "detail_deep")) {
+        let detailButton = FindaDetailTextButton(title: "버튼") {
             print("detail")
         }
         view.addSubview(detailButton)

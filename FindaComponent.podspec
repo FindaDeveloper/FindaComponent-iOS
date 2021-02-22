@@ -18,9 +18,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'A library of UIComponent for Finda design system.'
 
   s.homepage         = 'https://github.com/FindaDeveloper/FindaComponent-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -34,7 +32,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Source/**/*.swift'
   
    s.resource_bundles = {
-     'FindaComponent' => ['Resource/**/*.ttf']
+     'FindaComponent' => ['Resource/**/*.{ttf, xcassets}']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

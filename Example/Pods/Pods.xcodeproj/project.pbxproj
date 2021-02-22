@@ -18,7 +18,9 @@
 		916D04E825D279D200190237 /* FindaBigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D04E725D279D200190237 /* FindaBigHeader.swift */; };
 		918672DF25D223A1007AEE3B /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918672DE25D223A1007AEE3B /* Spacing.swift */; };
 		919034B225D7E3FD003977F7 /* FindaBasicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919034B125D7E3FD003977F7 /* FindaBasicHeader.swift */; };
+		919540C925E3A01700627D1E /* FindaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919540C825E3A01700627D1E /* FindaImages.xcassets */; };
 		9199ECBD25D20B9200A7D890 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199ECBC25D20B9200A7D890 /* Color.swift */; };
+		91B88FFB25E3B1B200FCF549 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B88FFA25E3B1B200FCF549 /* Asset.swift */; };
 		91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11C625DCBCBB00CC7255 /* FindaButton.swift */; };
 		91EA11D225DCFD6800CC7255 /* FindaTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */; };
 		91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */; };
@@ -70,7 +72,9 @@
 		916D04E725D279D200190237 /* FindaBigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaBigHeader.swift; sourceTree = "<group>"; };
 		918672DE25D223A1007AEE3B /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		919034B125D7E3FD003977F7 /* FindaBasicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaBasicHeader.swift; sourceTree = "<group>"; };
+		919540C825E3A01700627D1E /* FindaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FindaImages.xcassets; sourceTree = "<group>"; };
 		9199ECBC25D20B9200A7D890 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		91B88FFA25E3B1B200FCF549 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		91EA11C625DCBCBB00CC7255 /* FindaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaButton.swift; sourceTree = "<group>"; };
 		91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaTextButton.swift; sourceTree = "<group>"; };
 		91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaComponent.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				913F716425CFE0E3003FE8F1 /* Typography.swift */,
 				9199ECBC25D20B9200A7D890 /* Color.swift */,
 				918672DE25D223A1007AEE3B /* Spacing.swift */,
+				91B88FFA25E3B1B200FCF549 /* Asset.swift */,
 			);
 			path = Garu;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				913F717E25CFE8C5003FE8F1 /* Font */,
+				919540C825E3A01700627D1E /* FindaImages.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919540C925E3A01700627D1E /* FindaImages.xcassets in Resources */,
 				913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */,
 				913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */,
 				913F71B025CFF85C003FE8F1 /* SpoqaHanSansNeo-Bold.ttf in Resources */,
@@ -479,6 +486,7 @@
 			files = (
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,
+				91B88FFB25E3B1B200FCF549 /* Asset.swift in Sources */,
 				91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */,
 				918672DF25D223A1007AEE3B /* Spacing.swift in Sources */,
 				91EA11D225DCFD6800CC7255 /* FindaTextButton.swift in Sources */,
