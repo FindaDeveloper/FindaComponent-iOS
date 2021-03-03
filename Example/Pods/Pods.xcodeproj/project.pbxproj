@@ -21,6 +21,7 @@
 		919540C925E3A01700627D1E /* FindaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919540C825E3A01700627D1E /* FindaImages.xcassets */; };
 		9199ECBD25D20B9200A7D890 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199ECBC25D20B9200A7D890 /* Color.swift */; };
 		91B88FFB25E3B1B200FCF549 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B88FFA25E3B1B200FCF549 /* Asset.swift */; };
+		91B8900D25E3B38E00FCF549 /* FindaBasicInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B8900C25E3B38E00FCF549 /* FindaBasicInput.swift */; };
 		91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11C625DCBCBB00CC7255 /* FindaButton.swift */; };
 		91EA11D225DCFD6800CC7255 /* FindaTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */; };
 		91FE9B4325D0BF3E0007BADE /* FindaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */; };
@@ -75,6 +76,7 @@
 		919540C825E3A01700627D1E /* FindaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FindaImages.xcassets; sourceTree = "<group>"; };
 		9199ECBC25D20B9200A7D890 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		91B88FFA25E3B1B200FCF549 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		91B8900C25E3B38E00FCF549 /* FindaBasicInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaBasicInput.swift; sourceTree = "<group>"; };
 		91EA11C625DCBCBB00CC7255 /* FindaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaButton.swift; sourceTree = "<group>"; };
 		91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaTextButton.swift; sourceTree = "<group>"; };
 		91FE9B4225D0BF3E0007BADE /* FindaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaComponent.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		916D04E525D2799300190237 /* Jogak */ = {
 			isa = PBXGroup;
 			children = (
+				91B8900B25E3B37300FCF549 /* Input */,
 				91EA11C525DCBC9F00CC7255 /* Button */,
 				916D04E625D279AB00190237 /* Header */,
 			);
@@ -236,6 +239,14 @@
 				919034B125D7E3FD003977F7 /* FindaBasicHeader.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		91B8900B25E3B37300FCF549 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				91B8900C25E3B38E00FCF549 /* FindaBasicInput.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		91EA11C525DCBC9F00CC7255 /* Button */ = {
@@ -485,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
+				91B8900D25E3B38E00FCF549 /* FindaBasicInput.swift in Sources */,
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,
 				91B88FFB25E3B1B200FCF549 /* Asset.swift in Sources */,
 				91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */,

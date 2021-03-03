@@ -14,37 +14,42 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let header = FindaBasicHeader()
-        header.clickBackButton = { print("back") }
-        header.titleLabel.text = "핀다 대출신청"
-        header.rightButtonType = .Icon(image: UIImage(findaAsset: .close), click: { print("close") })
-        view.addSubview(header)
-        header.setConstraint(
+        let basicInput = FindaBasicInput(placeholder: "대출 희망 금액")
+        basicInput.title = "대출 희망 금액 입력"
+        basicInput.unit = "만 원"
+        basicInput.subLabel.text = "0 원"
+        basicInput.subLabel.text = nil
+        basicInput.validation = { textField in
+            (textField.text?.count ?? 0) < 9
+        }
+        basicInput.textField.keyboardType = .numberPad
+        basicInput.errorLabel.text = "1조 넘기는건 좀 아니지..."
+        basicInput.formatting = FindaBasicInput.numberFormatting
+        view.addSubview(basicInput)
+        basicInput.setConstraint(
             top: safeArea.top,
             left: view.left,
-            right: view.right
+            right: view.right,
+            margins: .init(top: 20, left: 20, right: -20)
         )
-        let button = FindaButton(type: .primary, size: .small, title: "버튼") { print("button") }
-        view.addSubview(button)
-        button.setConstraint(
+        
+        let dummyInput = FindaBasicInput(placeholder: "더미")
+        view.addSubview(dummyInput)
+        dummyInput.setConstraint(
+            top: basicInput.bottom,
             left: view.left,
             right: view.right,
-            bottom: view.bottom,
-            margins: .init(top: 0, left: 20, bottom: -20 - safeAreaInsetBottom, right: -20)
+            margins: .init(top: 20, left: 20, right: -20)
         )
-        let underlineButton = FindaUnderlineTextButton(title: "버튼") { print("underline") }
-        view.addSubview(underlineButton)
-        underlineButton.setConstraint(
-            centerX: view.centerX,
-            centerY: view.centerY
-        )
-        let detailButton = FindaDetailTextButton(title: "버튼") {
-            print("detail")
-        }
-        view.addSubview(detailButton)
-        detailButton.setConstraint(
-            top: underlineButton.bottom,
-            centerX: view.centerX
+        
+        let disableInput = FindaBasicInput(placeholder: "그림의 떡")
+        disableInput.status = .disable
+        view.addSubview(disableInput)
+        disableInput.setConstraint(
+            top: dummyInput.bottom,
+            left: view.left,
+            right: view.right,
+            margins: .init(top: 20, left: 20, right: -20)
         )
     }
 

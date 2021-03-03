@@ -13,6 +13,7 @@ import Foundation
 public enum Asset: String {
     case close
     case detailDeep
+    case error
     case goBack
 }
 
