@@ -60,6 +60,15 @@ class ViewController: UIViewController {
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
+        
+        let certificateInput = FindaCertificateInput(certificateSecond: 5)
+        view.addSubview(certificateInput)
+        certificateInput.setConstraint(
+            top: rrnWithoutGender.bottom,
+            left: view.left,
+            right: view.right,
+            margins: .init(top: 20, left: 20, right: -20)
+        )
     }
 
     override func didReceiveMemoryWarning() {

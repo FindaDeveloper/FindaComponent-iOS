@@ -11,6 +11,7 @@
 		5720D65E48ECE0057131FD1CD4648C4D /* Pods-FindaComponent_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D24FB5EADD3EB7338479B8A1EB26E87A /* Pods-FindaComponent_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A742F062A9F57772D67A678C6BCD7AE /* Pods-FindaComponent_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DC1B709B198AFC38CE8335EA552ED /* FindaComponent-dummy.m */; };
+		911674F925F0B87300DAE653 /* FindaCertificateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911674F825F0B87300DAE653 /* FindaCertificateInput.swift */; };
 		913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F716425CFE0E3003FE8F1 /* Typography.swift */; };
 		913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */; };
 		913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */; };
@@ -67,6 +68,7 @@
 		77B1E528D4FBE323C98C7F89AC5AF15C /* Pods-FindaComponent_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FindaComponent_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		77D71346B91ABC4192375D0758067500 /* Pods-FindaComponent_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FindaComponent_Tests-umbrella.h"; sourceTree = "<group>"; };
 		813A40C0B04CBF03506D27B53D2F0BC6 /* Pods-FindaComponent_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FindaComponent_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		911674F825F0B87300DAE653 /* FindaCertificateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaCertificateInput.swift; sourceTree = "<group>"; };
 		913F716425CFE0E3003FE8F1 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
 		913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.ttf"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				91B8900C25E3B38E00FCF549 /* FindaBasicInput.swift */,
 				9158EC7025EF874600C84E1A /* FindaResidentNumberInput.swift */,
+				911674F825F0B87300DAE653 /* FindaCertificateInput.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				91B8900D25E3B38E00FCF549 /* FindaBasicInput.swift in Sources */,
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,
+				911674F925F0B87300DAE653 /* FindaCertificateInput.swift in Sources */,
 				91B88FFB25E3B1B200FCF549 /* Asset.swift in Sources */,
 				91EA11C725DCBCBB00CC7255 /* FindaButton.swift in Sources */,
 				918672DF25D223A1007AEE3B /* Spacing.swift in Sources */,
