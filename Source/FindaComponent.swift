@@ -16,6 +16,7 @@ public class FindaResources {
         UIFont.fontsURLs().forEach {
             UIFont.register(from: $0)
         }
+        UITextField.appearance().tintColor = .blue500
     }
 }
 

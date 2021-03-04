@@ -38,6 +38,8 @@ public class FindaBasicInput: UIView {
         v.addTarget(self, action: #selector(_editingDidBegin(_:)), for: .editingDidBegin)
         v.addTarget(self, action: #selector(_editingChanged(_:)), for: .editingChanged)
         v.addTarget(self, action: #selector(_editingDidEnd(_:)), for: .editingDidEnd)
+        v.textColor = .mono900
+        v.delegate = self
         v.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [
@@ -45,7 +47,6 @@ public class FindaBasicInput: UIView {
                 NSAttributedString.Key.font: UIFont(name: TypographyStyle.regular.rawValue, size: TypographySize.jumbo.rawValue)!
             ]
         )
-        v.delegate = self
         return v
     }()
     
@@ -174,8 +175,10 @@ public class FindaBasicInput: UIView {
     public var formatting: ((UITextField) -> String)?
     
     public static let numberFormatting: ((UITextField) -> String) = { textField in
-        guard let text = textField.text else { return "0만 원" }
-        guard let number = Int(text) else { return "0만 워" }
+        guard let text = textField.text,
+              let number = Int(text) else {
+            return "0만 원"
+        }
         
         var result = ""
         

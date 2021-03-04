@@ -33,20 +33,29 @@ class ViewController: UIViewController {
             margins: .init(top: 20, left: 20, right: -20)
         )
         
-        let dummyInput = FindaBasicInput(placeholder: "더미")
-        view.addSubview(dummyInput)
-        dummyInput.setConstraint(
+        let rrnAll = FindaResidentNumberInput(rrnType: .all)
+        view.addSubview(rrnAll)
+        rrnAll.setConstraint(
             top: basicInput.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
-        
-        let disableInput = FindaBasicInput(placeholder: "그림의 떡")
-        disableInput.status = .disable
-        view.addSubview(disableInput)
-        disableInput.setConstraint(
-            top: dummyInput.bottom,
+        let rrnOnlyGender = FindaResidentNumberInput(rrnType: .onlyGender)
+        view.addSubview(rrnOnlyGender)
+        rrnOnlyGender.setConstraint(
+            top: rrnAll.bottom,
+            left: view.left,
+            right: view.right,
+            margins: .init(top: 20, left: 20, right: -20)
+        )
+        let rrnWithoutGender = FindaResidentNumberInput(rrnType: .withoutGender)
+        view.addSubview(rrnWithoutGender)
+        rrnWithoutGender.genderLabel.text = "3"
+        rrnWithoutGender.birthTextField.text = "020303"
+        rrnWithoutGender.titleLabel.text = "주민등록번호 뒷자리"
+        rrnWithoutGender.setConstraint(
+            top: rrnOnlyGender.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
