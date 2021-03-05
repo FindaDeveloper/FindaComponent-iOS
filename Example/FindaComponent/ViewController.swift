@@ -41,30 +41,21 @@ class ViewController: UIViewController {
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
-        let rrnOnlyGender = FindaResidentNumberInput(rrnType: .onlyGender)
-        view.addSubview(rrnOnlyGender)
-        rrnOnlyGender.setConstraint(
+        
+        let certificateInput = FindaCertificateInput(certificateSecond: 5)
+        view.addSubview(certificateInput)
+        certificateInput.setConstraint(
             top: rrnAll.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
-        let rrnWithoutGender = FindaResidentNumberInput(rrnType: .withoutGender)
-        view.addSubview(rrnWithoutGender)
-        rrnWithoutGender.genderLabel.text = "3"
-        rrnWithoutGender.birthTextField.text = "020303"
-        rrnWithoutGender.titleLabel.text = "주민등록번호 뒷자리"
-        rrnWithoutGender.setConstraint(
-            top: rrnOnlyGender.bottom,
-            left: view.left,
-            right: view.right,
-            margins: .init(top: 20, left: 20, right: -20)
-        )
         
-        let certificateInput = FindaCertificateInput(certificateSecond: 5)
-        view.addSubview(certificateInput)
-        certificateInput.setConstraint(
-            top: rrnWithoutGender.bottom,
+        let selectInput = FindaSelectInput(placeholder: "통신사 선택")
+        selectInput.title = "통신사"
+        view.addSubview(selectInput)
+        selectInput.setConstraint(
+            top: certificateInput.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
