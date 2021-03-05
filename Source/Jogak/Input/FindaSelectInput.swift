@@ -204,8 +204,3 @@ public class FindaSelectInput: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-public protocol FindaSelectInputDelegate {
-    
-    func pushSelectableViewController()
-}
