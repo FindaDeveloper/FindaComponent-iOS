@@ -126,6 +126,10 @@ public extension UIStackView {
 
 public typealias Action = (() -> Void)
 
-func fcLog(_ log: String) {
-    print("[FindaComponentLog] \(log)")
+func fcLog(_ log: Any...) {
+    print("[FindaComponentLog]", log)
+}
+
+func fcError(_ log: String) {
+    fatalError("[FindaComponentError] \(log)")
 }

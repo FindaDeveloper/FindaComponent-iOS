@@ -13,6 +13,7 @@
 		8B15FDC8245044C029571325174F3F35 /* FindaComponent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DC1B709B198AFC38CE8335EA552ED /* FindaComponent-dummy.m */; };
 		911674F925F0B87300DAE653 /* FindaCertificateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911674F825F0B87300DAE653 /* FindaCertificateInput.swift */; };
 		911674FE25F1C16B00DAE653 /* FindaSelectInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911674FD25F1C16B00DAE653 /* FindaSelectInput.swift */; };
+		9116750F25F226B900DAE653 /* FindaSelectButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116750E25F226B900DAE653 /* FindaSelectButtonGroup.swift */; };
 		913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F716425CFE0E3003FE8F1 /* Typography.swift */; };
 		913F71A625CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */; };
 		913F71AB25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */; };
@@ -71,6 +72,7 @@
 		813A40C0B04CBF03506D27B53D2F0BC6 /* Pods-FindaComponent_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FindaComponent_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		911674F825F0B87300DAE653 /* FindaCertificateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaCertificateInput.swift; sourceTree = "<group>"; };
 		911674FD25F1C16B00DAE653 /* FindaSelectInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaSelectInput.swift; sourceTree = "<group>"; };
+		9116750E25F226B900DAE653 /* FindaSelectButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaSelectButtonGroup.swift; sourceTree = "<group>"; };
 		913F716425CFE0E3003FE8F1 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
 		913F71AA25CFF850003FE8F1 /* SpoqaHanSansNeo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.ttf"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				91EA11C625DCBCBB00CC7255 /* FindaButton.swift */,
 				91EA11D125DCFD6800CC7255 /* FindaTextButton.swift */,
+				9116750E25F226B900DAE653 /* FindaSelectButtonGroup.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9116750F25F226B900DAE653 /* FindaSelectButtonGroup.swift in Sources */,
 				913F716525CFE0E3003FE8F1 /* Typography.swift in Sources */,
 				91B8900D25E3B38E00FCF549 /* FindaBasicInput.swift in Sources */,
 				9199ECBD25D20B9200A7D890 /* Color.swift in Sources */,

@@ -14,58 +14,59 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let basicInput = FindaBasicInput(placeholder: "대출 희망 금액")
-        basicInput.title = "대출 희망 금액 입력"
-        basicInput.unit = "만 원"
-        basicInput.subLabel.text = "0 원"
-        basicInput.subLabel.text = nil
-        basicInput.validation = { textField in
-            (textField.text?.count ?? 0) < 9
-        }
-        basicInput.textField.keyboardType = .numberPad
-        basicInput.errorLabel.text = "1조 넘기는건 좀 아니지..."
-        basicInput.formatting = FindaBasicInput.numberFormatting
-        view.addSubview(basicInput)
-        basicInput.setConstraint(
+        let selectGroup = FindaSelectButtonGroup(row: 3, buttonSize: .small)
+        view.addSubview(selectGroup)
+        selectGroup.setConstraint(
             top: safeArea.top,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
+        selectGroup.datas = [
+            ("SKT", nil),
+            ("KT", nil),
+            ("LG U+", nil),
+        ]
         
-        let rrnAll = FindaResidentNumberInput(rrnType: .all)
-        view.addSubview(rrnAll)
-        rrnAll.setConstraint(
-            top: basicInput.bottom,
+        let selectGroup1 = FindaSelectButtonGroup(row: 2, buttonSize: .large)
+        view.addSubview(selectGroup1)
+        selectGroup1.setConstraint(
+            top: selectGroup.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
+        selectGroup1.datas = [
+            ("1\n하나", nil),
+            ("2\n둘", nil),
+            ("3\n셋", nil),
+            ("4\n넷", nil),
+            ("5\n다섯", nil),
+        ]
         
-        let certificateInput = FindaCertificateInput(certificateSecond: 5)
-        view.addSubview(certificateInput)
-        certificateInput.setConstraint(
-            top: rrnAll.bottom,
+        let selectGroup2 = FindaSelectButtonGroup(row: 0, buttonSize: .large)
+        view.addSubview(selectGroup2)
+        selectGroup2.setConstraint(
+            top: selectGroup1.bottom,
             left: view.left,
             right: view.right,
             margins: .init(top: 20, left: 20, right: -20)
         )
-        
-        let selectInput = FindaSelectInput(placeholder: "통신사 선택")
-        selectInput.title = "통신사"
-        view.addSubview(selectInput)
-        selectInput.setConstraint(
-            top: certificateInput.bottom,
-            left: view.left,
-            right: view.right,
-            margins: .init(top: 20, left: 20, right: -20)
-        )
+        selectGroup2.datas = [
+            ("1", "작은 하나"),
+            ("2", "작은 둘"),
+            ("3", "작은 셋"),
+            ("4", "작은 넷"),
+            ("5", "작은 다섯"),
+        ]
+        selectGroup2.notifySelected = { indexPath, data in
+            print("selectGroup2", indexPath.item, data ?? "nil")
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
