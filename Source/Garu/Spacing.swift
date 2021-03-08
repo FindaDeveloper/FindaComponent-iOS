@@ -20,7 +20,7 @@ public let ULTRA    = Spacing.ultra.rawValue
 /*
  간격
  */
-enum Spacing: CGFloat {
+public enum Spacing: CGFloat {
     case mini   = 4
     case xSmall = 8
     case small  = 12

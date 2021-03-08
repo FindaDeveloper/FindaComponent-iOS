@@ -14,23 +14,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = FindaLabel(style: .bold, size: .mega)
-        label.text = "FINDA"
-        label.textColor = .accentBlue
-        view.addSubview(label)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+//        let detailButton = FindaDetailTextButton(title: "테스트", click: {})
+        let detailButton = FindaDetailTextButton(title: "테스트", accentColor: .accentBlue, click: {})
+        view.addSubview(detailButton)
+        detailButton.setConstraints(
+            top: safeArea.top,
+            left: view.left,
+            margins: .init(top: 20, left: 20)
+        )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
