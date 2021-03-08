@@ -129,11 +129,12 @@ extension FindaSelectButtonGroup: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.reloadData()
         collectionView.layoutIfNeeded()
-        let v = collectionView.cellForItem(at: indexPath) as! FindaSelectButton
-        v.isSelect = true
-        selectedData = v.data
-        selectedIndex = indexPath
-        notifySelected?(indexPath, v.data)
+        if let v = collectionView.cellForItem(at: indexPath) as? FindaSelectButton {
+            v.isSelect = true
+            selectedData = v.data
+            selectedIndex = indexPath
+            notifySelected?(indexPath, v.data)
+        }
     }
 }
 

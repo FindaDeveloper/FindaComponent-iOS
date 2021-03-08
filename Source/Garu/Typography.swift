@@ -39,10 +39,11 @@ public class FindaLabel: UILabel {
         - style: 폰트 스타일
         - size: 폰트 사이즈
         - color: 폰트 색상
+        - text: 텍스트
      */
-    public init(style: TypographyStyle, size: TypographySize, color: UIColor) {
+    public init(style: TypographyStyle, size: TypographySize, color: UIColor, text: String? = nil) {
         super.init(frame: .zero)
-        setLabel(style: style, size: size, color: color)
+        setLabel(style: style, size: size, color: color, text: text)
     }
     
     /**
@@ -50,10 +51,13 @@ public class FindaLabel: UILabel {
         - style: 폰트 스타일
         - size: 폰트 사이즈
         - color: 폰트 색상
+     - text: 텍스트
      */
-    public func setLabel(style: TypographyStyle, size: TypographySize, color: UIColor) {
+    public func setLabel(style: TypographyStyle, size: TypographySize, color: UIColor, text: String? = nil) {
         self.font = UIFont(name: style.rawValue, size: size.rawValue)
         self.textColor = color
+        self.numberOfLines = 0
+        self.text = text
     }
     
     required init?(coder: NSCoder) {

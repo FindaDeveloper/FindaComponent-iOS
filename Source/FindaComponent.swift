@@ -13,9 +13,7 @@ public class FindaResources {
      Spoqa Han Sans 폰트를 사용하려면 초기화가 필요합니다.
      */
     public static func initialize() {
-        UIFont.fontsURLs().forEach {
-            UIFont.register(from: $0)
-        }
+        UIFont.fontsURLs().forEach { UIFont.register(from: $0) }
         UITextField.appearance().tintColor = .blue500
     }
 }
@@ -34,9 +32,15 @@ extension UIFont {
     }
     
     static func fontsURLs() -> [URL] {
-        let bundle = Bundle(identifier: "org.cocoapods.FindaComponent")!
         let fileNames = ["SpoqaHanSansNeo-Light", "SpoqaHanSansNeo-Regular", "SpoqaHanSansNeo-Bold"]
-        return fileNames.map({ bundle.url(forResource: $0, withExtension: "ttf")! })
+        
+        if let bundleUrl = Bundle(for: FindaResources.self).url(forResource: "FindaComponent", withExtension: "bundle"),
+           let bundle = Bundle(url: bundleUrl) {
+            return fileNames.map { bundle.url(forResource: $0, withExtension: "ttf")! }
+        } else {
+            let bundle = Bundle(for: FindaResources.self)
+            return fileNames.map({ bundle.url(forResource: $0, withExtension: "ttf")! })
+        }
     }
 }
 
