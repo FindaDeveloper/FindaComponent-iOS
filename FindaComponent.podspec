@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FindaComponent'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'A library of UIComponent for Finda design system'
   s.swift_version    = '5.0'
 

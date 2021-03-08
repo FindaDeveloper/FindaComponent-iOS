@@ -22,7 +22,7 @@ public extension UIImage {
     
     convenience init?(findaAsset: Asset) {
         if let it = Bundle(for: FindaResources.self).url(forResource: "FindaComponent", withExtension: "bundle") {
-            self.init(named: Asset.close.rawValue, in: Bundle(url: it), compatibleWith: nil)
+            self.init(named: findaAsset.rawValue, in: Bundle(url: it), compatibleWith: nil)
         } else {
             self.init(named: findaAsset.rawValue, in: Bundle(for: FindaResources.self), compatibleWith: nil)
         }
