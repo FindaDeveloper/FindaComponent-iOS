@@ -58,11 +58,7 @@ public class FindaBasicInput: UIView {
     }()
     
     /// 단위 레이블
-    public lazy var unitLabel: FindaLabel = {
-        let v = FindaLabel(style: .regular, size: .jumbo, color: .mono900)
-        v.isHidden = true
-        return v
-    }()
+    public lazy var unitLabel = FindaLabel(style: .regular, size: .jumbo, color: .mono900)
     
     /// 에러 아이콘
     public lazy var errorIcon: UIImageView = {
@@ -185,7 +181,7 @@ public class FindaBasicInput: UIView {
     public var formatting: ((UITextField) -> String)?
     
     public static let numberFormatting: ((UITextField) -> String) = { textField in
-        guard let text = textField.text,
+        guard let text = textField.text?.replacingOccurrences(of:"[^0-9]", with: "", options: .regularExpression),
               let number = Int(text) else {
             return "0만 원"
         }
