@@ -44,6 +44,7 @@ public class FindaLabel: UILabel {
     public init(style: TypographyStyle, size: TypographySize, color: UIColor, text: String? = nil) {
         super.init(frame: .zero)
         setLabel(style: style, size: size, color: color, text: text)
+        self.numberOfLines = 0
     }
     
     /**
@@ -51,13 +52,20 @@ public class FindaLabel: UILabel {
         - style: 폰트 스타일
         - size: 폰트 사이즈
         - color: 폰트 색상
+        - nil 은 기본값 유지
      - text: 텍스트
      */
-    public func setLabel(style: TypographyStyle, size: TypographySize, color: UIColor, text: String? = nil) {
-        self.font = UIFont(name: style.rawValue, size: size.rawValue)
-        self.textColor = color
-        self.numberOfLines = 0
-        self.text = text
+    public func setLabel(style: TypographyStyle? = nil, size: TypographySize? = nil, color: UIColor? = nil, text: String? = nil) {
+        if let style = style?.rawValue,
+           let size = size?.rawValue {
+            self.font = UIFont(name: style, size: size)
+        }
+        if let it = color {
+            self.textColor = it
+        }
+        if let it = text {
+            self.text = it
+        }
     }
     
     required init?(coder: NSCoder) {

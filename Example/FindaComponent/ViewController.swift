@@ -14,14 +14,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let detailButton = FindaDetailTextButton(title: "테스트", click: {})
-        let detailButton = FindaDetailTextButton(title: "테스트", accentColor: .accentBlue, click: {})
-        view.addSubview(detailButton)
-        detailButton.setConstraints(
+        let v = FindaSelectButtonGroup(maxColumn: 3, buttonSize: .small)
+        view.addSubview(v)
+        v.setConstraints(
             top: safeArea.top,
             left: view.left,
-            margins: .init(top: 20, left: 20)
+            right: view.right,
+            margins: .init(top: 20, left: 20, right: -20)
         )
+        v.datas = [
+            ("1", nil),
+            ("1", nil),
+            ("1", nil),
+            ("1", nil),
+            ("1", nil),
+        ]
     }
 
     override func didReceiveMemoryWarning() {
