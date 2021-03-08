@@ -20,7 +20,7 @@ public class FindaResources {
     }
 }
 
-public extension UIFont {
+extension UIFont {
     
     static func register(from url: URL) {
         guard let fontDataProvider = CGDataProvider(url: url as CFURL) else {
@@ -49,7 +49,23 @@ public extension UIView {
     var centerX:    NSLayoutXAxisAnchor { centerXAnchor }
     var centerY:    NSLayoutYAxisAnchor { centerYAnchor }
     
-    func setConstraint(
+    /**
+     뷰의 constraints를 설정합니다
+     
+     - NOTE: 보편적인 constraint만을 설정합니다.
+     
+     - Parameters:
+        - top: topAnchor.constraint(equalTo: top, constant: margins.top)
+        - left: leftAnchor.constraint(equalTo: left, constant: margins.left)
+        - right: rigthAnchor.constraint(equalTo: right, constant: margins.right)
+        - bottom: bottomAnchor.constraint(equalTo: bottom, constant: margins.bottom)
+        - centerX: centerXAnchor.constraint(equalTo: centerX)
+        - centerY: centerYAnchor.constraint(equalTo: centerY)
+        - margins: top, left, right, bottom의 constant를 설정합니다.
+        - width: widthAnchor.constraint(equalToConstant: width)
+        - height: heightAnchor.constraint(equalToConstant: height)
+     */
+    func setConstraints(
         top:        NSLayoutYAxisAnchor?    = nil,
         left:       NSLayoutXAxisAnchor?    = nil,
         right:      NSLayoutXAxisAnchor?    = nil,
@@ -83,8 +99,11 @@ public extension UILayoutGuide {
 }
 
 public extension UIViewController {
+    
+    /// .view.safeAreaLayoutGuide
     var safeArea: UILayoutGuide { view.safeAreaLayoutGuide }
     
+    /// 디바이스의 safeAreaInsets.bottom 을 반환 (default: 0)
     var safeAreaInsetBottom: CGFloat {
         if #available(iOS 13, *) {
             return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
@@ -96,10 +115,18 @@ public extension UIViewController {
 
 public extension UIEdgeInsets {
     
+    /// Parameters의 기본값이 0으로 설정되어 있는 초기화
     init(top: CGFloat = 0, left: CGFloat = 0, right: CGFloat = 0, bottom: CGFloat = 0) {
         self.init(top: top, left: left, bottom: bottom, right: right)
     }
     
+    /**
+     - NOTE: setConstraints()의 margins에서 사용하면 의도를 무시할 수 있습니다.
+     
+     - Parameters:
+        - horizontal: .left, .right에 할당
+        - vertical: .top, .bottom에 할당
+     */
     init(horizontal: CGFloat = 0, vertical: CGFloat = 0) {
         self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
     }
@@ -107,10 +134,23 @@ public extension UIEdgeInsets {
 
 public extension UIView {
     
+    
+    /**
+     views 배열의 순서대로 addSubview()
+     
+     - Parameters:
+        - views: 추가할 뷰
+     */
     func addSubviews(_ views: [UIView]) {
         views.forEach { addSubview($0) }
     }
     
+    /**
+     isUserInteractionEnabled 를 활성화하고 tapGestureReconizer 를 추가함
+     
+     - Parameters:
+        - tapGestureRecognizer: 추가할 UITapGestureRecognizer
+     */
     func addTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
         isUserInteractionEnabled = true
         addGestureRecognizer(tapGestureRecognizer)
@@ -119,11 +159,13 @@ public extension UIView {
 
 public extension UIStackView {
     
+    /// views 배열의 순서대로 addArrangedSubview()
     func addArrangedSubviews(_ views: [UIView]) {
         views.forEach { addArrangedSubview($0) }
     }
 }
 
+/// Parameters 와 Return 값이 존재하지 않는 UserInteraction 에서 사용
 public typealias Action = (() -> Void)
 
 func fcLog(_ log: Any...) {

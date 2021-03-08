@@ -7,21 +7,29 @@
 
 import UIKit
 
+/// 단일 선택 버튼(FindaSelectButton)의 그룹
 public class FindaSelectButtonGroup: UIView {
     
-    public init(row: Int, buttonSize: ButtonSize) {
-        self.row = max(min(row, 3), 1)
+    /**
+     - Parameters:
+        - maxColumn: 한 줄당 최대 버튼 개수 (min 1, max 3)
+        - buttonSize: 버튼 크기
+     */
+    public init(maxColumn: Int, buttonSize: ButtonSize) {
+        self.maxColumn = max(min(maxColumn, 3), 1)
         self.buttonSize = buttonSize
         super.init(frame: .zero)
         setLayout()
         
-        if row < 1 { fcLog("\(self)의 row가 0 이하입니다.") }
+        if maxColumn < 1 { fcLog("\(self)의 maxColumn가 0 이하입니다.") }
     }
     
+    /// 버튼 데이터 (text, subText)
     public typealias Data = (text: String, subText: String?)
     
     //MARK: View
     
+    /// 버튼 리스트 뷰
     public lazy var collectionView: UICollectionView = {
         let fl = UICollectionViewFlowLayout()
         fl.minimumLineSpacing = 10
@@ -33,27 +41,29 @@ public class FindaSelectButtonGroup: UIView {
         return v
     }()
     
-    public lazy var collectionViewHeight = collectionView.heightAnchor.constraint(equalToConstant: 100)
+    private lazy var collectionViewHeight = collectionView.heightAnchor.constraint(equalToConstant: 0)
     
     private func setLayout() {
         addSubview(collectionView)
         
-        collectionView.setConstraint(
+        collectionView.setConstraints(
             top: top,
             left: left,
             right: right
         )
         collectionViewHeight.isActive = true
         
-        setConstraint(
+        setConstraints(
             bottom: collectionView.bottom
         )
     }
     
     //MARK: Data
     
+    /// 버튼이 선택될 때 index와 data를 알림
     public var notifySelected: ((IndexPath, Data?) -> Void)?
     
+    /// 버튼을 만들 데이터 리스트
     public var datas = [Data]() {
         didSet {
             collectionView.reloadData()
@@ -63,12 +73,19 @@ public class FindaSelectButtonGroup: UIView {
         }
     }
     
+    /// 선택된 버튼의 데이터
     public var selectedData: Data?
     
-    public let row: Int
+    /// 선택된 버튼의 인덱스
+    public var selectedIndex: IndexPath?
     
+    /// 한 줄당 최대 버튼 개수
+    public let maxColumn: Int
+    
+    /// 버튼 크기
     public let buttonSize: ButtonSize
     
+    /// 버튼 크기
     public enum ButtonSize {
         case small
         case large
@@ -104,8 +121,8 @@ extension FindaSelectButtonGroup: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellWidth = collectionView.bounds.width
-        cellWidth -= CGFloat((row - 1) * 10)
-        cellWidth /= CGFloat(row)
+        cellWidth -= CGFloat((maxColumn - 1) * 10)
+        cellWidth /= CGFloat(maxColumn)
         return CGSize(width: cellWidth - 0.01, height: buttonSize.value)
     }
     
@@ -115,10 +132,16 @@ extension FindaSelectButtonGroup: UICollectionViewDelegateFlowLayout {
         let v = collectionView.cellForItem(at: indexPath) as! FindaSelectButton
         v.isSelect = true
         selectedData = v.data
+        selectedIndex = indexPath
         notifySelected?(indexPath, v.data)
     }
 }
 
+/**
+ 단일 선택 버튼
+ 
+ - NOTE: FindaSelectButtonGroup을 이용하여 단일 선택을 보장하세요.
+ */
 public class FindaSelectButton: UICollectionViewCell {
     
     public override init(frame: CGRect) {
@@ -155,7 +178,7 @@ public class FindaSelectButton: UICollectionViewCell {
         
         stackView.addArrangedSubviews([label, subLabel])
         
-        stackView.setConstraint(
+        stackView.setConstraints(
             centerX: centerX,
             centerY: centerY
         )

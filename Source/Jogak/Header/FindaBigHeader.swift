@@ -27,14 +27,10 @@ public class FindaBigHeader: UIView {
     
     //MARK: View
     
-    /**
-     제목 레이블
-     */
+    /// 제목 레이블
     public lazy var titleLabel = FindaLabel(style: .bold, size: .jumbo, color: .mono900)
     
-    /**
-     오른쪽 기준 첫번째 아이콘 버튼
-     */
+    /// 오른쪽 기준 첫번째 아이콘 버튼
     public lazy var iconButton1: UIButton = {
         let v = UIButton()
         v.contentEdgeInsets = .init(horizontal: 8, vertical: 8)
@@ -42,9 +38,7 @@ public class FindaBigHeader: UIView {
         return v
     }()
     
-    /**
-     오른쪽 기준 두번째 아이콘 버튼
-     */
+    /// 오른쪽 기준 두번째 아이콘 버튼
     public lazy var iconButton2: UIButton = {
         let v = UIButton()
         v.contentEdgeInsets = .init(horizontal: 8, vertical: 8)
@@ -52,9 +46,7 @@ public class FindaBigHeader: UIView {
         return v
     }()
     
-    /**
-     오른쪽 기준 세번째 아이콘 버튼
-     */
+    /// 오른쪽 기준 세번째 아이콘 버튼
     public lazy var iconButton3: UIButton = {
         let v = UIButton()
         v.contentEdgeInsets = .init(horizontal: 8, vertical: 8)
@@ -65,27 +57,27 @@ public class FindaBigHeader: UIView {
     private func setLayout() {
         addSubviews([titleLabel, iconButton1, iconButton2, iconButton3])
         
-        titleLabel.setConstraint(
+        titleLabel.setConstraints(
             top: top,
             left: left,
             margins: .init(top: 24, left: 20)
         )
-        iconButton1.setConstraint(
+        iconButton1.setConstraints(
             right: right,
             centerY: titleLabel.centerY,
             margins: .init(right: -12),
             width: 40,
             height: 40
         )
-        iconButton2.setConstraint(
+        iconButton2.setConstraints(
             right: iconButton1.left,
             centerY: titleLabel.centerY
         )
-        iconButton3.setConstraint(
+        iconButton3.setConstraints(
             right: iconButton2.left,
             centerY: titleLabel.centerY
         )
-        setConstraint(
+        setConstraints(
             height: 78
         )
     }
@@ -94,9 +86,7 @@ public class FindaBigHeader: UIView {
     
     public typealias Icon = (image: UIImage?, imageClick: Action)
     
-    /**
-     iconButton1(오른쪽 기준 첫번째 아이콘 버튼)의 데이터
-     */
+    /// iconButton1(오른쪽 기준 첫번째 아이콘 버튼)의 데이터
     public var icon1: Icon? {
         didSet {
             if let it = icon1 {
@@ -105,9 +95,7 @@ public class FindaBigHeader: UIView {
         }
     }
     
-    /**
-     iconButton2(오른쪽 기준 두번째 아이콘 버튼)의 데이터
-     */
+    /// iconButton2(오른쪽 기준 두번째 아이콘 버튼)의 데이터
     public var icon2: Icon? {
         didSet {
             if let it = icon2 {
@@ -116,9 +104,7 @@ public class FindaBigHeader: UIView {
         }
     }
     
-    /**
-     iconButton3(오른쪽 기준 세번째 아이콘 버튼)의 데이터
-     */
+    /// iconButton3(오른쪽 기준 세번째 아이콘 버튼)의 데이터
     public var icon3: Icon? {
         didSet {
             if let it = icon3 {

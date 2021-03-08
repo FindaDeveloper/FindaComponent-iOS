@@ -7,9 +7,7 @@
 
 import UIKit
 
-/**
- 색상
- */
+/// 색상
 public class Color {
     
     // MARK: MONO

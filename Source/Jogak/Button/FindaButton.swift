@@ -7,8 +7,16 @@
 
 import UIKit
 
+/// 형태와 크기를 갖는 버튼
 public class FindaButton: UIView {
     
+    /**
+     - Parameters:
+        - type: 배경과 제목
+        - size: 높이
+        - title: 버튼 제목
+        - click: 클릭 액션
+     */
     public init(type: Type, size: Size, title: String, click: @escaping Action) {
         self.type = type
         self.size = size
@@ -22,18 +30,14 @@ public class FindaButton: UIView {
     
     //MARK: View
     
-    /**
-     아이콘 뷰
-     */
+    /// 아이콘 뷰
     public lazy var iconView: UIImageView = {
         let v = UIImageView()
         v.isHidden = true
         return v
     }()
     
-    /**
-     버튼 제목 레이블
-     */
+    /// 버튼 제목 레이블
     public lazy var titleLabel = FindaLabel()
     
     private lazy var titleLabelRightConstraint =
@@ -48,17 +52,17 @@ public class FindaButton: UIView {
         
         titleLabelRightConstraint.isActive = true
         
-        titleLabel.setConstraint(
+        titleLabel.setConstraints(
             centerY: centerY
         )
-        iconView.setConstraint(
+        iconView.setConstraints(
             right: titleLabel.left,
             centerY: centerY,
             margins: .init(right: -8),
             width: 16,
             height: 16
         )
-        setConstraint(
+        setConstraints(
             height: size.heightSize()
         )
     }
@@ -77,9 +81,7 @@ public class FindaButton: UIView {
     
     //MARK: Data
     
-    /**
-     아이콘 이미지
-     */
+    /// 아이콘 이미지
     public var icon: UIImage? {
         didSet {
             if let it = icon {
@@ -93,21 +95,28 @@ public class FindaButton: UIView {
         }
     }
     
-    /**
-     버튼 클릭
-     */
+    /// 버튼 클릭
     public var click: Action?
     
-    /**
-     버튼 타입 (배경, 제목을 결정함)
-     */
+    /// 버튼 타입
     public let type: Type
     
+    /// 버튼 타입 (배경, 제목을 결정함)
     public enum `Type`: Int {
+        
+        /// 파란 배경
         case primary
+        
+        /// 회색 배경
         case secondary
+        
+        /// 회색 배경 (regular font)
         case secondaryRegular
+        
+        /// 흰 배경 (gray border)
         case line
+        
+        /// 검정 배경
         case dark
         
         func titleStyle() -> TypographyStyle {
@@ -115,11 +124,10 @@ public class FindaButton: UIView {
         }
     }
     
-    /**
-     버튼 크기 (버튼, 제목 크기를 결정함)
-     */
+    /// 버튼 크기
     public let size: Size
     
+    /// 버튼 크기 (버튼, 제목 크기를 결정함)
     public enum Size {
         case small
         case medium
@@ -142,18 +150,23 @@ public class FindaButton: UIView {
         }
     }
     
-    /**
-     버튼 상태
-     */
+    /// 버튼 상태
     public var status: Status {
         didSet {
             refreshStatus()
         }
     }
     
+    /// 버튼 상태
     public enum Status: Int {
+        
+        /// 활성화
         case enable
+        
+        /// 클릭 중
         case hover
+        
+        /// 비활성화
         case disable
     }
     

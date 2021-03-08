@@ -7,8 +7,14 @@
 
 import UIKit
 
+/// UITextField 2개를 이용하여 주민등록 번호를 받는 Input View
 public class FindaResidentNumberInput: UIView {
     
+    /**
+     - Parameters:
+        - rrnType: 주민등록번호 입력 타입
+        - placeholder: birthTextField의 placeholder
+     */
     public init(
         rrnType: RrnType,
         placeholder: String = "앞자리 입력"
@@ -23,12 +29,14 @@ public class FindaResidentNumberInput: UIView {
     
     //MARK: View
     
+    /// 제목 레이블
     public lazy var titleLabel: FindaLabel = {
         let v = FindaLabel(style: .regular, size: .caption, color: .mono700)
         v.text = "주민등록번호"
         return v
     }()
     
+    /// 앞자리 텍스트 필드
     public lazy var birthTextField: UITextField = {
         let v = UITextField()
         v.font = UIFont(name: TypographyStyle.regular.rawValue, size: TypographySize.jumbo.rawValue)
@@ -49,20 +57,23 @@ public class FindaResidentNumberInput: UIView {
         return v
     }()
     
+    
+    /// 하이픈
     public lazy var hypen: UIView = {
         let v = UIView()
         v.backgroundColor = .mono900
         return v
     }()
     
+    /// 주민번호 뒷자리 텍스트 필드
     public lazy var postTextField: UITextField = {
         let v = UITextField()
         v.font = UIFont(name: TypographyStyle.regular.rawValue, size: TypographySize.jumbo.rawValue)
         v.addTarget(self, action: #selector(_editingDidBegin(_:)), for: .editingDidBegin)
         v.addTarget(self, action: #selector(_editingChanged(_:)), for: .editingChanged)
         v.addTarget(self, action: #selector(_editingDidEnd(_:)), for: .editingDidEnd)
-        v.textAlignment = type == .onlyGender ? .center : .left
-        v.isSecureTextEntry = type != .onlyGender
+        v.textAlignment = type == .untilGender ? .center : .left
+        v.isSecureTextEntry = type != .untilGender
         v.keyboardType = .numberPad
         v.textColor = .mono900
         v.delegate = self
@@ -77,51 +88,58 @@ public class FindaResidentNumberInput: UIView {
         return v
     }()
     
+    /**
+     설정하지 않을 경우 •••••• 등 마스킹을 표현하지만 type이 .withoutGender이면 뒷자리 첫번째 숫자를 표현
+     */
     public lazy var genderLabel: FindaLabel = {
         let v = FindaLabel(style: .regular, size: .jumbo, color: .mono900)
         v.text = " •  •  •  •  •  • "
         return v
     }()
     
+    /// birthTextField 보더
     public lazy var birthBorder: UIView = {
         let v = UIView()
         v.backgroundColor = .mono200
         return v
     }()
     
+    /// postTextField 보더
     public lazy var postBorder: UIView = {
         let v = UIView()
         v.backgroundColor = .mono200
         return v
     }()
     
+    /// 에러 아이콘
     public lazy var errorIcon: UIImageView = {
         let v = UIImageView()
         v.image = UIImage(findaAsset: .error)
         return v
     }()
     
+    /// 에러 레이블
     public lazy var errorLabel = FindaLabel(style: .regular, size: .caption, color: .red500)
     
-    public lazy var birthBorderHeightConstraint = birthBorder.heightAnchor.constraint(equalToConstant: 1)
+    private lazy var birthBorderHeightConstraint = birthBorder.heightAnchor.constraint(equalToConstant: 1)
     
-    public lazy var postBorderHeightConstraint = postBorder.heightAnchor.constraint(equalToConstant: 1)
+    private lazy var postBorderHeightConstraint = postBorder.heightAnchor.constraint(equalToConstant: 1)
     
     private func setLayout() {
         addSubviews([titleLabel, birthTextField, hypen, postTextField, birthBorder, postBorder, errorIcon, errorLabel])
         
-        titleLabel.setConstraint(
+        titleLabel.setConstraints(
             top: top,
             left: left,
             right: right
         )
-        birthTextField.setConstraint(
+        birthTextField.setConstraints(
             top: titleLabel.bottom,
             left: left,
             right: hypen.left,
             margins: .init(top: 4, right: -14)
         )
-        hypen.setConstraint(
+        hypen.setConstraints(
             centerX: centerX,
             centerY: birthTextField.centerY,
             width: 10,
@@ -129,42 +147,42 @@ public class FindaResidentNumberInput: UIView {
         )
         switch type {
         case .all:
-            postTextField.setConstraint(
+            postTextField.setConstraints(
                 top: birthTextField.top,
                 left: hypen.right,
                 right: right,
                 margins: .init(left: 16)
             )
-        case .onlyGender:
-            postTextField.setConstraint(
+        case .untilGender:
+            postTextField.setConstraints(
                 top: birthTextField.top,
                 left: hypen.right,
                 margins: .init(left: 16),
                 width: 16
             )
             addSubview(genderLabel)
-            genderLabel.setConstraint(
+            genderLabel.setConstraints(
                 top: postTextField.top,
                 left: postTextField.right,
                 right: right,
                 margins: .init(top: 1, left: 6)
             )
-        case .withoutGender:
+        case .postWithoutGender:
             addSubview(genderLabel)
-            genderLabel.setConstraint(
+            genderLabel.setConstraints(
                 top: birthTextField.top,
                 left: hypen.right,
                 margins: .init(top: 1, left: 15),
                 width: 16
             )
-            postTextField.setConstraint(
+            postTextField.setConstraints(
                 top: birthTextField.top,
                 left: genderLabel.right,
                 right: right,
                 margins: .init(left: 5)
             )
         }
-        birthBorder.setConstraint(
+        birthBorder.setConstraints(
             top: birthTextField.bottom,
             left: birthTextField.left,
             right: birthTextField.right,
@@ -172,7 +190,7 @@ public class FindaResidentNumberInput: UIView {
         )
         birthBorderHeightConstraint.isActive = true
         
-        postBorder.setConstraint(
+        postBorder.setConstraints(
             top: postTextField.bottom,
             left: postTextField.left,
             right: postTextField.right,
@@ -180,17 +198,17 @@ public class FindaResidentNumberInput: UIView {
         )
         postBorderHeightConstraint.isActive = true
         
-        errorIcon.setConstraint(
+        errorIcon.setConstraints(
             top: birthBorder.top,
             left: left,
             margins: .init(top: 6)
         )
-        errorLabel.setConstraint(
+        errorLabel.setConstraints(
             top: errorIcon.top,
             left: errorIcon.right,
             margins: .init(top: 1, left: 4)
         )
-        setConstraint(
+        setConstraints(
             bottom: errorIcon.bottom
         )
     }
@@ -200,7 +218,7 @@ public class FindaResidentNumberInput: UIView {
         postBorder.backgroundColor = status.borderColor
         birthBorder.backgroundColor = status.borderColor
         postBorderHeightConstraint.constant = status.borderHeight
-        birthBorderHeightConstraint.constant = status.borderHeight * (type == .withoutGender ? 0 : 1)
+        birthBorderHeightConstraint.constant = status.borderHeight * (type == .postWithoutGender ? 0 : 1)
         
         errorIcon.isHidden = status != .error
         errorLabel.isHidden = status != .error
@@ -208,38 +226,40 @@ public class FindaResidentNumberInput: UIView {
         postTextField.isUserInteractionEnabled = status != .disable
         birthTextField.isUserInteractionEnabled = status != .disable
         
-        birthTextField.isUserInteractionEnabled = type != .withoutGender
+        birthTextField.isUserInteractionEnabled = type != .postWithoutGender
     }
     
     //MARK: Data
     
+    /// 주민등록번호 입력 타입
     public private(set) var type: RrnType
     
+    /// 주민등록번호 입력 타입
     public enum RrnType {
+        
+        /// 전부 받음
         case all
-        case onlyGender
-        case withoutGender
+        
+        /// 앞자리 및 성별
+        case untilGender
+        
+        /// 성별을 제외한 뒷자리
+        case postWithoutGender
         
         var postPlaceholder: String {
             switch self {
             case .all: return " •  •  •  •  •  •  • "
-            case .onlyGender: return "•"
-            case .withoutGender: return " •  •  •  •  •  • "
+            case .untilGender: return "•"
+            case .postWithoutGender: return " •  •  •  •  •  • "
             }
         }
     }
     
-    public var placeholder: String {
-        didSet {
-            refreshStatus()
-        }
-    }
-    
-    public var title: String? {
-        didSet {
-            titleLabel.text = title
-        }
-    }
+    /**
+     .birthTextField의 placeholder
+     - NOTE: 할당 시 재변경을 보장해 주지 않음
+     */
+    public var placeholder: String
     
     @objc private func _editingChanged(_ textField: UITextField) {
         status = .focused
@@ -257,16 +277,26 @@ public class FindaResidentNumberInput: UIView {
         }
     }
     
+    /// 뷰의 상태
     public var status: Status {
         didSet {
             refreshStatus()
         }
     }
     
+    /// 뷰의 상태
     public enum Status: Int {
+        
+        /// 기본
         case basic
+        
+        /// 입력 중
         case focused
+        
+        /// 에러
         case error
+        
+        /// 비활성화
         case disable
         
         var borderHeight: CGFloat {
@@ -329,8 +359,8 @@ extension FindaResidentNumberInput: UITextFieldDelegate {
         } else {
             switch type {
             case .all: maxLength = 7
-            case .onlyGender: maxLength = 1
-            case .withoutGender: maxLength = 6
+            case .untilGender: maxLength = 1
+            case .postWithoutGender: maxLength = 6
             }
         }
         
