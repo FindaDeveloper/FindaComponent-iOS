@@ -21,6 +21,10 @@ public enum Asset: String {
 public extension UIImage {
     
     convenience init?(findaAsset: Asset) {
-        self.init(named: findaAsset.rawValue, in: Bundle(for: FindaResources.self), compatibleWith: nil)
+        if let it = Bundle(for: FindaResources.self).url(forResource: "FindaComponent", withExtension: "bundle") {
+            self.init(named: Asset.close.rawValue, in: Bundle(url: it), compatibleWith: nil)
+        } else {
+            self.init(named: findaAsset.rawValue, in: Bundle(for: FindaResources.self), compatibleWith: nil)
+        }
     }
 }
