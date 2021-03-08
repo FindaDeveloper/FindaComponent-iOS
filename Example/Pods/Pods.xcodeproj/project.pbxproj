@@ -206,8 +206,8 @@
 		913F717D25CFE71E003FE8F1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9157D9C225F5CD2F00EFAC59 /* Image */,
 				913F717E25CFE8C5003FE8F1 /* Font */,
-				919540C825E3A01700627D1E /* FindaImages.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -228,6 +228,14 @@
 				913F71A525CFF842003FE8F1 /* SpoqaHanSansNeo-Regular.ttf */,
 			);
 			path = SpoqaHanSans;
+			sourceTree = "<group>";
+		};
+		9157D9C225F5CD2F00EFAC59 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				919540C825E3A01700627D1E /* FindaImages.xcassets */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		916D04E525D2799300190237 /* Jogak */ = {

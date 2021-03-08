@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FindaComponent'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A library of UIComponent for Finda design system'
   s.swift_version    = '5.0'
 
@@ -33,6 +33,10 @@ Pod::Spec.new do |s|
   
    s.resource_bundles = {
      'FindaComponent' => ['Resource/**/*.{ttf, xcassets}']
+   }
+   
+   s.Resource = {
+       
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
