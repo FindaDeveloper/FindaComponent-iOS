@@ -186,6 +186,10 @@ public class FindaBasicInput: UIView {
             return "0만 원"
         }
         
+        if number == 0 {
+            return "0만 원"
+        }
+        
         var result = ""
         
         let formatter = NumberFormatter()

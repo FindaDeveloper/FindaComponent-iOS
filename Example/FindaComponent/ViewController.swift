@@ -14,21 +14,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let v = FindaSelectButtonGroup(maxColumn: 3, buttonSize: .small)
+        let v = FindaBasicInput(placeholder: "대출 희망 금액")
+        v.formatting = FindaBasicInput.numberFormatting
         view.addSubview(v)
         v.setConstraints(
-            top: safeArea.top,
-            left: view.left,
-            right: view.right,
+            top: safeArea.topAnchor,
+            left: view.leftAnchor,
+            right: view.rightAnchor,
             margins: .init(top: 20, left: 20, right: -20)
         )
-        v.datas = [
-            ("1", nil),
-            ("1", nil),
-            ("1", nil),
-            ("1", nil),
-            ("1", nil),
-        ]
     }
 
     override func didReceiveMemoryWarning() {

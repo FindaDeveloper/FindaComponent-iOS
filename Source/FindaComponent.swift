@@ -44,14 +44,7 @@ extension UIFont {
     }
 }
 
-public extension UIView {
-    
-    var top:        NSLayoutYAxisAnchor { topAnchor }
-    var left:       NSLayoutXAxisAnchor { leftAnchor }
-    var right:      NSLayoutXAxisAnchor { rightAnchor }
-    var bottom:     NSLayoutYAxisAnchor { bottomAnchor }
-    var centerX:    NSLayoutXAxisAnchor { centerXAnchor }
-    var centerY:    NSLayoutYAxisAnchor { centerYAnchor }
+extension UIView {
     
     /**
      뷰의 constraints를 설정합니다
@@ -69,7 +62,7 @@ public extension UIView {
         - width: widthAnchor.constraint(equalToConstant: width)
         - height: heightAnchor.constraint(equalToConstant: height)
      */
-    func setConstraints(
+    public func setConstraints(
         top:        NSLayoutYAxisAnchor?    = nil,
         left:       NSLayoutXAxisAnchor?    = nil,
         right:      NSLayoutXAxisAnchor?    = nil,
@@ -93,9 +86,16 @@ public extension UIView {
         if let it = width   { widthAnchor.constraint(equalToConstant: it).isActive = true }
         if let it = height  { heightAnchor.constraint(equalToConstant: it).isActive = true }
     }
+    
+    var top:        NSLayoutYAxisAnchor { topAnchor }
+    var left:       NSLayoutXAxisAnchor { leftAnchor }
+    var right:      NSLayoutXAxisAnchor { rightAnchor }
+    var bottom:     NSLayoutYAxisAnchor { bottomAnchor }
+    var centerX:    NSLayoutXAxisAnchor { centerXAnchor }
+    var centerY:    NSLayoutYAxisAnchor { centerYAnchor }
 }
 
-public extension UILayoutGuide {
+extension UILayoutGuide {
     var top:        NSLayoutYAxisAnchor { topAnchor }
     var left:       NSLayoutXAxisAnchor { leftAnchor }
     var right:      NSLayoutXAxisAnchor { rightAnchor }
@@ -125,7 +125,7 @@ public extension UIEdgeInsets {
     }
     
     /**
-     - NOTE: setConstraints()의 margins에서 사용하면 의도를 무시할 수 있습니다.
+     - NOTE: setConstraints()의 margins에서 사용하면 setConstraints()의 의도를 무시할 수 있습니다.
      
      - Parameters:
         - horizontal: .left, .right에 할당
@@ -137,7 +137,6 @@ public extension UIEdgeInsets {
 }
 
 public extension UIView {
-    
     
     /**
      views 배열의 순서대로 addSubview()
